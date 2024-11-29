@@ -1,4 +1,5 @@
-﻿using JoaoConde_ExamenProgreso2.Models;
+﻿using JoaoConde_ExamenProgreso2.Interfaces;
+using JoaoConde_ExamenProgreso2.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace JoaoConde_ExamenProgreso2.Repositories
 {
-    public class PersonaFilesRepository
+    public class PersonaFilesRepository : IPersonaRepository
     {
         public string _fileName = Path.Combine(FileSystem.AppDataDirectory, "JoaoConde.txt");
 
@@ -24,6 +25,19 @@ namespace JoaoConde_ExamenProgreso2.Repositories
             {
                 throw;
             }
+        }
+
+        public Persona ObtenerPersona(int Id)
+        {
+            Persona persona = new Persona();
+
+            if (File.Exists(_fileName))
+            {
+                string data = File.ReadAllText(_fileName);
+                persona = JsonConvert.DeserializeObject<Persona>(data);
+            }
+
+            return persona;
         }
     }
 }

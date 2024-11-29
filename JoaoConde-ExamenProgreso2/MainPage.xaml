@@ -70,14 +70,14 @@
 
             <Label
                 x:Name="jconde_label5"
-                Text="Nombre: {}"
+                Text="{Binding Nombre}"
                 FontSize="15"
                 SemanticProperties.HeadingLevel="Level1"
                 />
 
             <Label
                 x:Name="jconde_label6"
-                Text="Télefono: {}"
+                Text="{Binding Telefono}"
                 FontSize="15"
                 SemanticProperties.HeadingLevel="Level1"
                 />

@@ -10,5 +10,6 @@ namespace JoaoConde_ExamenProgreso2.Interfaces
     public interface IPersonaRepository
     {
         Boolean CrearPersona(Persona persona);
+        Persona ObtenerPersona(int Id);
     }
 }
