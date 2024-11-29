@@ -26,8 +26,8 @@ namespace JoaoConde_ExamenProgreso2
 
             Persona persona = new Persona() {
                 ID = id,
-                Nombre = nombre,
-                Telefono = telefono
+                Nombre = "Nombre: " + nombre,
+                Telefono = "Teléfono: " + telefono
             };
 
             bool crear_persona = _personaRepository.CrearPersona(persona);
