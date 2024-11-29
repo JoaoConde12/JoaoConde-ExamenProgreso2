@@ -46,6 +46,12 @@
                 PlaceholderColor="Gray"
                 />
 
+            <Button
+                x:Name="jconde_button1"
+                Text="Hacer recarga"
+                Clicked="BotonHacerRecarga_Clicked"
+                />
+
             <!-- Separador -->
             <BoxView
                 Margin="0, 30"

@@ -6,6 +6,11 @@
         {
             InitializeComponent();
         }
+
+        private void BotonHacerRecarga_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
