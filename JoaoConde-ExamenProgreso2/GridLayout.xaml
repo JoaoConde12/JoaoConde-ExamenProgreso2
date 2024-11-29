@@ -3,10 +3,56 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JoaoConde_ExamenProgreso2.GridLayout"
              Title="GridLayout">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="jconde_label1"
+               Grid.Column="0"
+               BackgroundColor="Yellow"
+               Text="Joao"
+               TextColor="DarkGreen"
+               FontSize="30"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               />
+
+        <Label x:Name="jconde_label2"
+               Grid.Column="1"
+               BackgroundColor="Blue"
+               Text="Fernando"
+               TextColor="Coral"
+               FontSize="30"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               />
+        
+        <Label x:Name="jconde_label3"
+               Grid.Row="1"
+               BackgroundColor="Red"
+               Text="Conde"
+               TextColor="DarkBlue"
+               FontSize="30"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               />
+
+        <Label x:Name="jconde_label4"
+               Grid.Row="1"
+               Grid.Column="1"
+               BackgroundColor="Green"
+               Text="Cueva"
+               TextColor="HotPink"
+               FontSize="30"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               />
+    </Grid>
 </ContentPage>
